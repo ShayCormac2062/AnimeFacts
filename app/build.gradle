@@ -77,6 +77,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:${okhttp}"
     debugImplementation "com.squareup.okhttp3:logging-interceptor:${okhttp}"
 
+    implementation "io.coil-kt:coil:1.1.1"
+
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'androidx.core:core-ktx:1.7.0'
