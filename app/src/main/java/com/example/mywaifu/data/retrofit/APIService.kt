@@ -11,6 +11,6 @@ interface APIService {
     @GET("api/v1")
     fun getAllAnime(): Single<AnimeResponse>
 
-    @GET("api/v1/:{animeName}")
+    @GET("api/v1/{animeName}")
     fun getAnimeFacts(@Query("anime_name") animeName: String): Single<AnimeWithFacts>
 }
