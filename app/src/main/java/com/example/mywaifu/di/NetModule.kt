@@ -1,4 +1,4 @@
-package com.example.mywaifu.presentation.di
+package com.example.mywaifu.di
 
 import com.example.mywaifu.data.retrofit.APIService
 import dagger.Module
@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -36,6 +37,7 @@ class NetModule {
             .client(okHttp)
             .baseUrl(PARSE_ROOT)
             .addConverterFactory(gsonConverterFactory)
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
 
     @Provides

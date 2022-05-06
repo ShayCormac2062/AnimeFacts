@@ -5,6 +5,7 @@ import com.example.mywaifu.domain.model.AnimeFact
 import com.example.mywaifu.domain.model.AnimeList
 import com.example.mywaifu.domain.repository.AnimeRepository
 import io.reactivex.rxjava3.core.Single
+import java.lang.StringBuilder
 import java.util.*
 
 import javax.inject.Inject
@@ -29,12 +30,15 @@ class AnimeRepositoryImpl @Inject constructor(
                 fact.toAnimeFact()
             }
 
-    private fun transformFromCamel(name: String): String =
-        name.replace("_", " ").also {
-            it[0].minus(32)
+    private fun transformFromCamel(name: String): String {
+        val builder = StringBuilder(name.replace("_", " ")).also {
+            it.setCharAt(0, Character.toUpperCase(name[0]))
         }
+        return builder.toString()
+    }
 
-    private fun transformToCamel(name: String): String =
-        name.lowercase(Locale.getDefault()).replace('_', ' ')
+    private fun transformToCamel(name: String): String {
+        return name.replace(' ', '_').lowercase(Locale.getDefault())
+    }
 
 }

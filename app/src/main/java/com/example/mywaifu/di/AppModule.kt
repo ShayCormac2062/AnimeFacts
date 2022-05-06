@@ -1,4 +1,4 @@
-package com.example.mywaifu.presentation.di
+package com.example.mywaifu.di
 
 import android.app.Application
 import android.content.Context

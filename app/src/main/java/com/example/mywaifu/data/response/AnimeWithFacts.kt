@@ -5,7 +5,7 @@ import com.example.mywaifu.domain.model.Fact
 import com.google.gson.annotations.SerializedName
 
 data class AnimeWithFacts(
-    @SerializedName("anime_img")
+    @SerializedName("img")
     val animeImg: String,
     val data: List<FactResponse>,
     val success: Boolean,

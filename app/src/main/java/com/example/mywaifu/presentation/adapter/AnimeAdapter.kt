@@ -7,7 +7,7 @@ import com.example.mywaifu.databinding.ViewAnimeCardviewBinding
 import com.example.mywaifu.domain.model.Data
 import coil.load
 
-class AnimeAdapter(private var dataList: ArrayList<Data>) : RecyclerView.Adapter<AnimeAdapter.AnimeViewHolder>() {
+class AnimeAdapter(private var dataList: List<Data>) : RecyclerView.Adapter<AnimeAdapter.AnimeViewHolder>() {
 
     var onClick: ((String) -> Unit)? = null
 

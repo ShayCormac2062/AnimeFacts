@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mywaifu.databinding.ViewFactCardviewBinding
 import com.example.mywaifu.domain.model.Fact
 
-class FactAdapter(private var factsList: ArrayList<Fact>) : RecyclerView.Adapter<FactAdapter.FactViewHolder>() {
+class FactAdapter(private var factsList: List<Fact>) : RecyclerView.Adapter<FactAdapter.FactViewHolder>() {
 
     inner class FactViewHolder(
         private val binding: ViewFactCardviewBinding

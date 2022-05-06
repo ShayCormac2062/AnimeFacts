@@ -1,6 +1,6 @@
-package com.example.mywaifu.presentation.di
+package com.example.mywaifu.di
 
-import com.example.mywaifu.utils.DispatcherProvider
+import com.example.mywaifu.di.utils.DispatcherProvider
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
