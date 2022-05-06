@@ -1,4 +1,4 @@
-package com.example.mywaifu.utils
+package com.example.mywaifu.di.utils
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

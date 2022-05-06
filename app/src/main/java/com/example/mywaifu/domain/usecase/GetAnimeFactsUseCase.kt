@@ -10,7 +10,8 @@ class GetAnimeFactsUseCase @Inject constructor(
     private val repository: AnimeRepository
 ) {
 
-    operator fun invoke(name: String): Single<AnimeFact> = repository.getAnimeFact(name)
-        .subscribeOn(Schedulers.io())
+    operator fun invoke(name: String): Single<AnimeFact> =
+        repository.getAnimeFact(name)
+         .subscribeOn(Schedulers.io())
 
 }
